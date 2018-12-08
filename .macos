@@ -92,6 +92,9 @@ chflags nohidden ~/Library
 ## Dock & Mission Control                     ##
 ################################################
 
+# Position dock on the right (there is more horizontal real estate)
+defaults write com.apple.dock orientation right
+
 # Set dock to auto-hide
 defaults write com.apple.dock autohide -bool true
 
