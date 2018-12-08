@@ -4,6 +4,9 @@
 #
 # All of the settings here have been verified as of 10.14 Mojave.
 # Apple seems to have removed or renamed a bunch of earlier config options.
+#
+# Options:
+# --no-restart: Don't restart any apps or services after running the script.
 
 ################################################
 ## General System                             ##
@@ -173,7 +176,10 @@ sudo pmset -c displaysleep 10
 ## Restart applications and services          ##
 ################################################
 
-for app in "Dock" "Finder" "Mail" "SystemUIServer" "iTunes" "Safari"; do
-  killall "${app}" > /dev/null 2>&1
-done
+# Restarts if `--no-restart` flag is not present.
+if [[ ! ($* == *--no-restart*) ]]; then
+  for app in "cfprefsd" "Dock" "Finder" "Mail" "SystemUIServer" "Terminal"; do
+    killall "${app}" > /dev/null 2>&1
+  done
+fi
 
