@@ -23,7 +23,7 @@ defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Set location for screenshots
-defaults write com.apple.screencapture location $HOME/Downloads/
+defaults write com.apple.screencapture location $HOME/screenshots/
 
 # Enable the 'reduce transparency' accessibility option (not 100% I want this)
 defaults write com.apple.universalaccess reduceTransparency -bool true
@@ -109,7 +109,7 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Set apps to minimize to dock icons
 
 # Group Mission Control windows by application
-defaults write com.apple.dock "expose-group-by-app" -bool true
+defaults write com.apple.dock "expose-group-apps" -bool true
 
 # Hot corners
 # Possible values:
@@ -133,8 +133,8 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # Top left
-defaults write com.apple.dock wvous-bl-corner -int 10
-defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock wvous-tl-modifier -int 0
 
 ################################################
 ## Safari                                     ##
