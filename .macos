@@ -28,6 +28,9 @@ defaults write com.apple.screencapture location $HOME/screenshots/
 # Enable the 'reduce transparency' accessibility option (not 100% I want this)
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Disable the smooth font rendering disabler
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+
 ################################################
 ## Input                                      ##
 ################################################
