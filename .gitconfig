@@ -1,52 +1,9 @@
-# This is Git's per-user configuration file.
-
 [user]
 	email = 222259+ronlipke@users.noreply.github.com
 	name = Ron Lipke
-	signingkey = 63ACFA5614B027D8
-[core]
-	editor = subl
-	excludesfile = ~/.gitignore_global
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-[merge]
-	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[mergetool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
-[alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	remotes = remote -v
-	branches = branch -a
-  stashes = stash list
-	unstage = reset -q HEAD --
-	discard = checkout --
-	nevermind = !git reset --hard HEAD && git clean -d -f
-	uncommit = reset --mixed HEAD~
-	save = commit -m
-  resave = commit --amend
-  invert = revert
-	last = log -1 HEAD --format=format:"%Cred%H"
-	summary = status -u -s
-	graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
-	history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
-	prestage = diff -w --word-diff=color
-  precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
-	branchout = checkout -b
-	unstash = stash pop
-	amend = commit --amend
-	ksdiff = difftool
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+	signingkey = 6C714DAEF68D5441
 [commit]
 	gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /usr/local/bin/gpg2
+
